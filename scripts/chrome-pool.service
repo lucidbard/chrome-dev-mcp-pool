@@ -1,0 +1,16 @@
+[Unit]
+Description=Chrome Pool Manager Service
+After=network.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=%h/chrome-pool-manager/pool-service
+ExecStart=%h/chrome-pool-manager/pool-service/venv/bin/python chrome_pool_service.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

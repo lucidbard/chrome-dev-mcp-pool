@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "chrome-manager": {
+      "command": "/home/john/chrome-pool-manager/mcp-server/venv/bin/python",
+      "args": [
+        "/home/john/chrome-pool-manager/mcp-server/chrome_manager_mcp.py"
+      ]
+    }
+  }
+}

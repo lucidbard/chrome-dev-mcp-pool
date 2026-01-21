@@ -1,0 +1,17 @@
+[Unit]
+Description=Chrome Manager MCP Server
+After=chrome-pool.service
+Requires=chrome-pool.service
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=%h/chrome-pool-manager/mcp-server
+ExecStart=%h/chrome-pool-manager/mcp-server/venv/bin/python chrome_manager_mcp.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
